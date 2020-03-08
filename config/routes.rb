@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :citations
 
+  devise_for :users
+  
   get 'welcome/index'
 
   root 'welcome#index'
