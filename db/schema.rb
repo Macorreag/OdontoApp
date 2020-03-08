@@ -12,27 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_03_08_174853) do
 
-  create_table "appointments", force: :cascade do |t|
-    t.date "date"
-    t.time "time"
-    t.time "duration"
-    t.string "site"
-    t.integer "id_patient"
-    t.string "description"
-    t.integer "id_doctor"
-    t.boolean "attendance"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.integer "visits_count"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "citations", force: :cascade do |t|
     t.date "date"
     t.time "time"
@@ -53,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_03_08_174853) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
-    t.string "permission_level"
+    t.string "rapermission_level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
