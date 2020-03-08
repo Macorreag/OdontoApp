@@ -1,0 +1,13 @@
+<%= form_for (@citation) do |f| %>
+    
+<div>
+    <%= f.date_field :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+</div>
+<div>
+    <%= f.text_field :description ,placeholder:"descripcion" %>
+
+</div>
+<div>
+    <%= f.submit "guardar"%>
+</div>
+<% end %>

@@ -5,4 +5,7 @@ class CitationsController < ApplicationController
     def show
         @citations = Citation.find(params[:id])
     end
+    def new
+        @citation = Citation.new
+    end
 end
