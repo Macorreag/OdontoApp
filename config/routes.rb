@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :citations
+
   get 'welcome/index'
 
   root 'welcome#index'
